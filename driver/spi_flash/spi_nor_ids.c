@@ -55,17 +55,17 @@
 	.flags = SNOR_HAS_FSR | SNOR_SECT_4K | SNOR_NO_4BAIS
 
 #define MX25(_name, _jedec_id, _n_sectors)      \
-        .name = _name,                          \
-        ID5(_jedec_id, 0),                      \
-        .sector_size = 65536U,                  \
-        .n_sectors = (_n_sectors),              \
-        .page_size = 256,                       \
-        .flags = SNOR_SECT_4K | SNOR_NO_4BAIS
+	.name = _name,                          \
+	ID5(_jedec_id, 0),                      \
+	.sector_size = 65536U,                  \
+	.n_sectors = (_n_sectors),              \
+	.page_size = 256,                       \
+	.flags = SNOR_SECT_4K | SNOR_NO_4BAIS
 
 
 const struct spi_nor_info spi_nor_ids[] = {
 	/* Macronix */
-	{ MX25("mx25l25635f", 0xc22019,  512), },
+	{ MX25("mx25l25645g", 0xc22019,  512), },
 
 	/* Micron */
 	{ N25Q("n25q032ax1", 0x20bb16,   64), },
