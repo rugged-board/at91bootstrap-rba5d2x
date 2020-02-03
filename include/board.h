@@ -100,6 +100,10 @@
 #include "sama5d27_som1_ek.h"
 #endif
 
+#ifdef CONFIG_RUGGED_BOARD_A5D2X
+#include "rugged_board_a5d2x.h"
+#endif
+
 #ifdef CONFIG_SAMA5D2_LPDDR2SIP_VB
 #include "sama5d2_lpddr2sip_vb.h"
 #endif
