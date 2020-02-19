@@ -28,103 +28,29 @@ using a toolchain newer than 6.0.
 2 Compile AT91Bootstrap
 ================================================================================
 
-## 2.1 Compile DataFlashBoot
+## 2.1 Compile SDCardBoot
 
-Let's use at91sam9x5ek as an example.
+Let's use rugged board a5d2x as an example.
 
 ### 2.1.1 Compile booting u-boot image from DataFlash
 
-    $ cd <project directory>
+    $ git clone git@github.com:rugged-board/at91bootstrap-rba5d2x.git
+    $ cd at91bootstrap-rba5d2x
+    $ git checkout origin/at91bootstrap-rba5d2x_v3.8.12
     $ make mrproper
-    $ make at91sam9x5ekdf_uboot_defconfig
+    $ make rugged_board_a5d2xsd1_uboot_defconfig
     $ make
 
 If the building process is successful, the final .bin image can be found under
 binaries/
 
-### 2.1.2 Compile booting kernel image from DataFlash
+### 2.2  Compile NOR flash boot
 
-    $ cd <project directory>
+    $ git clone git@github.com:rugged-board/at91bootstrap-rba5d2x.git
+    $ cd at91bootstrap-rba5d2x
+    $ git checkout origin/at91bootstrap-rba5d2x_v3.8.12
     $ make mrproper
-    $ make at91sam9x5ekdf_linux_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-### 2.1.3 Compile booting kernel & dt image from DataFlash
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9x5ekdf_linux_dt_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-## 2.2 Compile NandFlashBoot
-
-Let's use at91sam9m10g45ek as an example.
-
-### 2.2.1 Compile booting u-boot image from NandFlash
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eknf_uboot_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-### 2.2.2 Compile booting kernel image from NandFlash
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eknf_linux_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-### 2.2.3 Compile booting kernel & dt image from NandFlash
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eknf_linux_dt_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-## 2.3 Compile SDCardBoot
-
-Let's use at91sam9m10g45ek as an example,
-
-### 2.3.1 Compile booting u-boot image from SDCard
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eksd_uboot_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-### 2.3.2 Compile booting linux image from SDCard
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eksd_linux_defconfig
-    $ make
-
-If the building process is successful, the final .bin image can be found under
-binaries/
-
-### 2.3.3 Compile booting linux & dt image from SDCard
-
-    $ cd <project directory>
-    $ make mrproper
-    $ make at91sam9m10g45eksd_linux_dt_defconfig
+    $ make rugged_board_a5d2xqspi_uboot_defconfig
     $ make
 
 If the building process is successful, the final .bin image can be found under
