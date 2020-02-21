@@ -34,7 +34,7 @@ Let's use rugged board a5d2x as an example.
 
 ### 2.1.1 Compile booting u-boot image from DataFlash
 
-    $ git clone git@github.com:rugged-board/at91bootstrap-rba5d2x.git
+    $ git clone https://github.com/rugged-board/at91bootstrap-rba5d2x.git
     $ cd at91bootstrap-rba5d2x
     $ git checkout origin/at91bootstrap-rba5d2x_v3.8.12
     $ make mrproper
@@ -46,7 +46,7 @@ binaries/
 
 ### 2.2  Compile NOR flash boot
 
-    $ git clone git@github.com:rugged-board/at91bootstrap-rba5d2x.git
+    $ git clone https://github.com/rugged-board/at91bootstrap-rba5d2x.git
     $ cd at91bootstrap-rba5d2x
     $ git checkout origin/at91bootstrap-rba5d2x_v3.8.12
     $ make mrproper
